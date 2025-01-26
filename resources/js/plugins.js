@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 /**
  * Place any jQuery/helper plugins in here.
  */

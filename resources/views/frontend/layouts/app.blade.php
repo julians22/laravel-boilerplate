@@ -12,8 +12,14 @@
     @stack('before-styles')
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ mix('css/frontend.css') }}" rel="stylesheet">
-    <livewire:styles />
+    @vite([
+        'resources/js/frontend/app.js',
+        'resources/js/plugins.js',
+        'resources/sass/frontend/app.scss'
+        ])
+
+    @livewireStyles
+
     @stack('after-styles')
 </head>
 <body>
@@ -31,10 +37,7 @@
     </div><!--app-->
 
     @stack('before-scripts')
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/frontend.js') }}"></script>
-    <livewire:scripts />
+    @livewireScripts
     @stack('after-scripts')
 </body>
 </html>

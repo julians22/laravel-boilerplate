@@ -28,3 +28,11 @@
         </x-slot>
     </x-backend.card>
 @endsection
+
+@push('after-styles')
+    {{-- <link rel="stylesheet" href="{{ asset('vendor/rappasoft/livewire-tables/css/bootstrap-custom.min.css') }}"> --}}
+@endpush
+
+@push('after-scripts')
+    {{-- <script src="{{ asset('vendor/rappasoft/livewire-tables/js/laravel-livewire-tables.min.js') }}"></script> --}}
+@endpush

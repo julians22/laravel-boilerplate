@@ -1,13 +1,9 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
+        "dev": "vite",
+        "build": "vite build"
     },
     "devDependencies": {
         "@coreui/coreui": "^3.0.0",
@@ -19,7 +15,7 @@
         "bootstrap": "^4.5.0",
         "cross-env": "^7.0",
         "jquery": "^3.5.1",
-        "laravel-mix": "^6.0.6",
+        "laravel-vite-plugin": "^1.2.0",
         "lodash": "^4.17.19",
         "perfect-scrollbar": "^1.5.0",
         "popper.js": "^1.16.1",
@@ -28,6 +24,7 @@
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
         "sweetalert2": "^9.8.2",
+        "vite": "^6.0.11",
         "vue": "^2.5.17",
         "vue-loader": "^15.9.5",
         "vue-template-compiler": "^2.6.10"
