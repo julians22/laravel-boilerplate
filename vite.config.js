@@ -22,6 +22,7 @@ export default defineConfig({
             '~@fortawesome/fontawesome-free/webfonts': path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
             '~@coreui/coreui/scss/coreui': path.resolve(__dirname, 'node_modules/@coreui/coreui/scss/coreui.scss'),
             '~@coreui/icons/css/free.min.css': path.resolve(__dirname, 'node_modules/@coreui/icons/css/free.min.css'),
+            'sweetalert2': path.resolve(__dirname, 'node_modules/sweetalert2'),
         }
     },
 })

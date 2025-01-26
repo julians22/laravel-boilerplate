@@ -6,7 +6,7 @@ use App\Domains\Auth\Rules\UnusedPassword;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
-use LangleyFoxall\LaravelNISTPasswordRules\PasswordRules;
+use Illuminate\Validation\Rules\Password;
 
 /**
  * Class ResetPasswordController.
@@ -51,13 +51,17 @@ class ResetPasswordController
         return [
             'token' => ['required'],
             'email' => ['required', 'max:255', 'email'],
-            'password' => array_merge(
+            'password' =>
                 [
                     'max:100',
                     new UnusedPassword(request('email')),
-                ],
-                PasswordRules::changePassword(request('email'))
-            ),
+                    Password::min(8)
+                        ->mixedCase()
+                        ->letters()
+                        ->numbers()
+                        ->symbols()
+                        ->uncompromised()
+                ]
         ];
     }
 
@@ -73,7 +77,7 @@ class ResetPasswordController
     public function showResetForm(Request $request, $token = null)
     {
         return view('frontend.auth.passwords.reset')
-            ->withToken($token)
-            ->withEmail($request->email);
+            ->with('token', $token)
+            ->with('email', $request->email);
     }
 }

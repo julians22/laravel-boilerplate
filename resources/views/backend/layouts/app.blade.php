@@ -14,7 +14,8 @@
         'resources/js/backend/app.js',
         'resources/js/plugins.js',
         'resources/sass/backend/app.scss'])
-    <livewire:styles />
+
+    @livewireStyles
     @stack('after-styles')
 </head>
 <body class="c-app">
@@ -41,7 +42,7 @@
     </div><!--c-wrapper-->
 
     @stack('before-scripts')
-    <livewire:scripts />
+    @livewireScripts
     @stack('after-scripts')
 </body>
 </html>
