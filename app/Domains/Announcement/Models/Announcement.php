@@ -11,6 +11,8 @@ use Spatie\Activitylog\Traits\LogsActivity;
 /**
  * Class Announcement.
  */
+use Spatie\Activitylog\LogOptions;
+
 class Announcement extends Model
 {
     use AnnouncementScope,
@@ -59,4 +61,17 @@ class Announcement extends Model
     {
         return AnnouncementFactory::new();
     }
+
+    /**
+     * Get the options for activity logging.
+     *
+     * @return \Spatie\Activitylog\LogOptions
+     */
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logOnly(['area', 'type', 'message', 'enabled', 'starts_at', 'ends_at'])
+            ->useLogName('announcement');
+    }
+
 }
