@@ -10,7 +10,10 @@
     @yield('meta')
 
     @stack('before-styles')
-    <link href="{{ mix('css/backend.css') }}" rel="stylesheet">
+    @vite([
+        'resources/js/backend/app.js',
+        'resources/js/plugins.js',
+        'resources/sass/backend/app.scss'])
     <livewire:styles />
     @stack('after-styles')
 </head>
@@ -38,9 +41,6 @@
     </div><!--c-wrapper-->
 
     @stack('before-scripts')
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/backend.js') }}"></script>
     <livewire:scripts />
     @stack('after-scripts')
 </body>
