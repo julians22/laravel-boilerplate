@@ -1,7 +1,7 @@
 @if($announcements->count())
     @foreach($announcements as $announcement)
-        <x-utils.alert :type="$announcement->type" :dismissable="false" class="pt-1 pb-1 mb-0">
+        <x-frontend.alert :type="$announcement->type" :dismissable="false">
             {{ (new \Illuminate\Support\HtmlString($announcement->message)) }}
-        </x-utils.alert>
+        </x-frontend.alert>
     @endforeach
 @endif

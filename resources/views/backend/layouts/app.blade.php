@@ -13,9 +13,16 @@
     @vite([
         'resources/js/backend/app.js',
         'resources/js/plugins.js',
-        'resources/sass/backend/app.scss'])
+        'resources/sass/backend/app.scss',
+        'resources/vendor/fontawesome/app.scss'])
 
     @livewireStyles
+
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+
     @stack('after-styles')
 </head>
 <body class="c-app">

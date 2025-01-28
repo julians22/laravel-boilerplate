@@ -3,9 +3,9 @@
 @section('title', __('My Account'))
 
 @section('content')
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
+    <div class="container mx-auto py-4">
+        <div class="flex justify-content-center">
+            <div class="max-w-7xl w-full">
                 <x-frontend.card>
                     <x-slot name="header">
                         @lang('My Account')

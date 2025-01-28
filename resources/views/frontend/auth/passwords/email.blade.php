@@ -3,9 +3,9 @@
 @section('title', __('Reset Password'))
 
 @section('content')
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+    <div class="container py-4 mx-auto">
+        <div class="grid grid-cols-3">
+            <div class="col-start-2">
                 <x-frontend.card>
                     <x-slot name="header">
                         @lang('Reset Password')

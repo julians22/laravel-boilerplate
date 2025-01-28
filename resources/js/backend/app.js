@@ -2,7 +2,7 @@ import 'bootstrap';
 
 import $ from 'jquery';
 import Swal from 'sweetalert2';
-import '@coreui/coreui';
+import '~@coreuijs';
 
 window.$ = window.jQuery = $;
 window.Swal = Swal;

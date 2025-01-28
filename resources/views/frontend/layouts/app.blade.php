@@ -12,11 +12,7 @@
     @stack('before-styles')
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    @vite([
-        'resources/js/frontend/app.js',
-        'resources/js/plugins.js',
-        'resources/sass/frontend/app.scss'
-        ])
+    @vite(['resources/css/app.css', 'resources/vendor/fontawesome/app.scss'])
 
     @livewireStyles
 

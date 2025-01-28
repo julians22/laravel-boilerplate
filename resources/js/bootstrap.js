@@ -1,10 +1,3 @@
-import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
-import '@fortawesome/fontawesome-free/scss/brands.scss';
-import '@fortawesome/fontawesome-free/scss/regular.scss';
-import '@fortawesome/fontawesome-free/scss/solid.scss';
-import '@fortawesome/fontawesome-free/scss/v4-shims.scss';
-
-
 import _ from 'lodash';
 import Swal from 'sweetalert2';
 import Popper from 'popper.js';
