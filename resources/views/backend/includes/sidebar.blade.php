@@ -29,6 +29,16 @@
                 $logged_in_user->can('admin.access.user.change-password')
             )
         )
+            <li class="c-sidebar-nav-title">@lang('Orders')</li>
+            <li class="c-sidebar-nav-item">
+                <x-utils.link
+                    class="c-sidebar-nav-link"
+                    :href="route('admin.order.index')"
+                    :active="activeClass(Route::is('admin.order.*'), 'c-active')"
+                    icon="c-sidebar-nav-icon cil-speedometer"
+                    :text="__('Order Management')" />
+            </li>
+
             <li class="c-sidebar-nav-title">@lang('System')</li>
 
             <li class="c-sidebar-nav-dropdown {{ activeClass(Route::is('admin.auth.user.*') || Route::is('admin.auth.role.*'), 'c-open c-show') }}">
